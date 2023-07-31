@@ -14,7 +14,7 @@ from langchain.memory import VectorStoreRetrieverMemory
 from langchain.chains import ConversationChain
 from langchain.docstore import InMemoryDocstore
 from langchain.memory import ConversationBufferMemory
-
+from dotenv import load_dotenv
 st.title("Discovery Drafter")
 
 #### OBJECTION INPUT SECTION ####
@@ -149,7 +149,8 @@ any issue of liability, or Plaintiff’s damages and causation for those damages
 st.subheader("Litigation Questionnaire Query:")
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+load_dotenv()
+os.getenv("OPENAI_API_KEY")
 
 #### QUERY SECTION ####
 
